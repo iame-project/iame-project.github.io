@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Item_Primogem.png">
+ </head>
+ <body>
+
+<div id="border">
+     
+<div id="main2">    
+    <div id = "addedContainer">
+        <div id ="contained">
+            <button name = "0" class = "selected button"  id="firstRounded" onClick="highlight(this)"></button>
+        </div>
+        
+        <div id ="addOrRemove">
+            
+            
+            <button id ="adjustButton1" onclick ="addNewSet()">+</button>
+            <button id ="adjustButton2" onclick ="removeSet()">x</button>
+        </div>
+    </div>
+</div> 
+
+<div id="main">
+    <input class="titles2" id="group" type = "text" value = "Peace Lilies"><br>
+    
+    <div id = "subRollsContainer" >
+        <div class = "titles4">Last watered: </div>
+        <div class = "titles4" id = "days"></div>
+        <div class = "titles4">day(s) and</div>
+        <div class = "titles4" id = "hours"></div>
+        <div class = "titles4">hour(s) ago</div>
+    </div>
+    
+    <div id = "subRollsContainer" >
+    <div class = "titlesHot">Min: </div>
+    <div class = "titles4 titles4Adjusted1" id = "min">-</div>
+    </div>
+    
+    <div id = "subRollsContainer" >
+    <div class = "titlesCold">Max: </div>
+    <div class = "titles4 titles4Adjusted2" id = "max">-</div>
+    </div>
+    
+    <div id = "addWaterButton" onClick="addStatButton()"></div>
+    
+    
+    
+    
+    <h1 class="titles">Health: </h1> 
+    <form>
+       <select id ="healthComboBox" name="healthStat" onchange="">
+        <option class ="select-items" value="Green (Healthy)">Green (Healthy)</option>
+        <option class ="select-items" value="Wilting (Needs Water)">Wilting (Needs Water)</option>
+        <option class ="select-items" value="Yellow (Over/Under Watered)">Yellow (Over/Under Watered)</option>
+      </select>
+    </form>
+
+    <h1 class="titles">Soil Moisture level: </h1>
+    <form>
+       <select id="soilComboBox" name="soilStat">
+        <option class ="select-items" value="Dry">Dry</option>
+        <option class ="select-items" value="Damp">Damp</option>
+        <option class ="select-items" value="Wet">Wet</option>
+      </select>
+    </form>
+    
+    <h1 class="titles" id="timeanddateHead">Time and Date: </h1>
+    <div id = "subRollsContainer" >
+        <select id = "dayComboBox">
+           <option class ="select-items" value="01">01</option><option class ="select-items" value="02">02</option><option class ="select-items" value="03">03</option>
+           <option class ="select-items" value="04">04</option><option class ="select-items" value="05">05</option><option class ="select-items" value="06">06</option>
+           <option class ="select-items" value="07">07</option><option class ="select-items" value="08">08</option><option class ="select-items" value="09">09</option>
+           <option class ="select-items" value="10">10</option><option class ="select-items" value="11">11</option><option class ="select-items" value="12">12</option>
+           <option class ="select-items" value="13">13</option><option class ="select-items" value="14">14</option><option class ="select-items" value="15">15</option>
+           <option class ="select-items" value="16">16</option><option class ="select-items" value="17">17</option><option class ="select-items" value="18">18</option>
+           <option class ="select-items" value="19">19</option><option class ="select-items" value="20">20</option><option class ="select-items" value="21">21</option>
+           <option class ="select-items" value="22">22</option><option class ="select-items" value="23">23</option><option class ="select-items" value="24">24</option>
+           <option class ="select-items" value="25">25</option><option class ="select-items" value="26">26</option><option class ="select-items" value="27">27</option>
+           <option class ="select-items" value="28">28</option><option class ="select-items" value="29">29</option><option class ="select-items" value="30">30</option>
+           <option class ="select-items" value="31">31</option>
+        </select>
+        <select id = "monthComboBox">
+           <option class ="select-items" value="01">01</option><option class ="select-items" value="02">02</option><option class ="select-items" value="03">03</option>
+           <option class ="select-items" value="04">04</option><option class ="select-items" value="05">05</option><option class ="select-items" value="06">06</option>
+           <option class ="select-items" value="07">07</option><option class ="select-items" value="08">08</option><option class ="select-items" value="09">09</option>
+           <option class ="select-items" value="10">10</option><option class ="select-items" value="11">11</option><option class ="select-items" value="12">12</option>
+        </select>
+        <select id = "yearComboBox">
+           <option class ="select-items" value="2021">2021</option>
+           <option class ="select-items" value="2022">2022</option>
+           <option class ="select-items" value="2023">2023</option>
+           <option class ="select-items" value="2024">2024</option>
+           <option class ="select-items" value="2025">2025</option>
+        </select>
+    </div>
+    
+    <div id="containEdits">
+    <button class="editButton" onClick = "editValue()">save</button>
+    <button class="editButton" onClick = "hideEdit()">cancel</button>
+    </div>
+
+</div>
+    
+<div id="main3">
+
+        
+    <div id = "outsideContainer" style="height: 230px; width: 112%;">
+    <canvas id="chartContainer" ></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+
+</div>
+    
+</div>
+<div id = "keyContainer">
+    <div id="keyTitle">Key: </div>
+    <input id="key" type = "text" onkeyup="validateKey()" onchange="validateKeyFill()" value = "aBcfejf"><br>
+    <button id="keyGrab" onClick = "LoadOrSave()">load</button>
+</div>
+
+<script src="script.js"></script>
+         
+ </body>
+ </html>
