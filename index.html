@@ -2,7 +2,8 @@
  <html>
  <head>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Item_Primogem.png">
+  <link rel="icon" href="leaf-transparent-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  </head>
  <body>
 
@@ -16,9 +17,12 @@
         
         <div id ="addOrRemove">
             
-            
-            <button id ="adjustButton1" onclick ="addNewSet()">+</button>
-            <button id ="adjustButton2" onclick ="removeSet()">x</button>
+            <button id ="adjustButton1" onclick ="addNewSet()">
+                <i class="fa fa-plus" style="font-size:13px;font-weight:500;color:white"></i>
+            </button>
+            <button id ="adjustButton2" onclick ="removeSet()">
+                <i class="fa fa-remove" style="font-size:15px;color:white"></i>
+            </button>
         </div>
     </div>
 </div> 
@@ -120,8 +124,8 @@
 </div>
 <div id = "keyContainer">
     <div id="keyTitle">Key: </div>
-    <input id="key" type = "text" onkeyup="validateKey()" onchange="validateKeyFill()" value = "aBcfejf"><br>
-    <button id="keyGrab" onClick = "LoadOrSave()">load</button>
+    <input id="key" type = "text" value = "aBcfejf"><br>
+    <button id="keyGrab" onClick = "loadDocPhp()">load</button>
 </div>
 
 <script src="script.js"></script>
