@@ -1,9 +1,11 @@
 body {
-  background-image: url('leafBackground.jpg');
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
+  background: url('leafBackground.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-color: #F0F8DB;
+  
 }
 h1 {
   color: White;
@@ -40,7 +42,7 @@ p {
     border: none;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 110px;
+    
     color: White;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -49,20 +51,6 @@ p {
     font-family: Arial;
     font-weight: 600;
     font-size: 92%;
-}
-#keyGrab{
-  color: White;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left:5px;
-  padding-right:5px;
-  text-align: left;
-  font-family: Arial;
-  font-weight: 600;
-  font-size: 92%;
-  background-color: #212B2AB0;
-  border: none;
-  border-radius: 0px;
 }
 
 .titles{
@@ -382,7 +370,7 @@ p {
   margin-top: 0px;
   padding-bottom: 0px;
   display: flex;
-  width: 112%;
+  width: 110%;
   padding-top: 0px;
   justify-content: space-between;
 
@@ -497,39 +485,33 @@ input:checked + .slider:before {
 }
 
 #addOrRemove {
+  position: relative;
+  left: 0%;
   display: flex;
-  padding-left: 10px;
-  flex: 0%;
+  
   margin-top: 0px;
-  margin-left: 10px;
-}
-#adjustButton1{
-  background-color: #212B2A00;
-  border:  none;
-  color: white;
-  cursor: pointer;
-  width: 20px;
-  height: 10px; 
-  text-indent: 0px;
-  margin-top: 0px;
-  font-weight: 500;
-  font-family: Helvetica;
-  font-size: 143%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   
 }
+#adjustButton1{
+  background-color: #21232b00;
+  border:  none;
+  color: white;
+  cursor: pointer;  
+  margin-top: 5px;
+  width: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
 #adjustButton2{
-  background-color: #212B2A00;
+  background-color: #21232b00;
   border:  none;
   color: white;
   cursor: pointer;
-  width: 20px;
-  height: 10px; 
-  text-indent: 0px;
-  margin-top: 1px;
-  padding-bottom: 0px;
-  font-weight: 500;
-  font-family: Helvetica;
-  font-size: 115%;
+  margin-top: 4px;
+  width: 10px;
+  
 }
 #head-percentage{
   color: White;
@@ -624,3 +606,4 @@ background-color: #2574AB;
   font-family: Arial;
   font-size: 92%;
 }
+
